@@ -1,5 +1,5 @@
 {
-  "name": "wasm-tests",
+  "name": "wat-tests",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/andypea/wasm-tests"
+    "url": "github.com/andypea/wat-tests"
   },
   "author": "Andrew Punnett",
   "license": "MIT",
