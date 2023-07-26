@@ -1,3 +1,4 @@
+;; Comments are preceeded by semi-colons
 (module 
   (import "console" "log" (func $log (param i32)))
   (func $add (param $m i32) (param $n i32) (result i32) 
