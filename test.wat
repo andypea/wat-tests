@@ -1,8 +1,8 @@
 (module 
-  (func $add (param $m i64) (param $n i64) (result i64) 
+  (func $add (param $m i32) (param $n i32) (result i32) 
     local.get $m
     local.get $n
-    i64.add
+    i32.add
   )
   (export "add" (func $add))
 )
