@@ -1,8 +1,18 @@
 const fs = require("fs");
 
 const wasmBuffer = fs.readFileSync("./dist/test.wasm");
-WebAssembly.instantiate(wasmBuffer).then((wasmModule) => {
-  const { add } = wasmModule.instance.exports;
-  const sum = add(5, 6);
+
+const importObject = {
+  console: {
+    log(arg) {
+      console.log(arg);
+    },
+  },
+};
+
+WebAssembly.instantiate(wasmBuffer, importObject).then((wasmModule) => {
+  const { add, logIt } = wasmModule.instance.exports;
+  const sum = add(7, 6);
   console.log(sum);
+  logIt();
 });
